@@ -1,6 +1,6 @@
 # This is my respository to show my work
 ## In this repository are the following projects:
-### - Project 
+### - Human Machine Symbiosis Poster
 ### - Project 
 ### - Project 
 ### - Project 
