@@ -7,6 +7,6 @@
 ### - Project 3
 ### - Marketbasket Analysis
 ### - Sales Promo Analysis
-### - Placeholder 3
+### - MLB Attendance Improvement  
 ### - Placeholder 4
 ### - Placeholder 5
