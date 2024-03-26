@@ -6,7 +6,7 @@
 ### - Project 2
 ### - Project 3
 ### - Marketbasket Analysis
-### - Placeholder 2
+### - Sales Promo Analysis
 ### - Placeholder 3
 ### - Placeholder 4
 ### - Placeholder 5
