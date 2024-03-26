@@ -1,12 +1,12 @@
-# This is my respository to show my work
+# This is my repository to show my work
 ## In this repository are the following projects:
 ### - Human Machine Symbiosis Poster
 ### - Weather Program
-### - Project 
-### - Project 
-### - Project 
-### - Project 
-### - Project 
-### - Project 
-### - Project 
-### - Project 
+### - Project 1
+### - Project 2
+### - Project 3
+### - Placeholder 1 
+### - Placeholder 2
+### - Placeholder 3
+### - Placeholder 4
+### - Placeholder 5
