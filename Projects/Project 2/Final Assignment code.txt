@@ -1,0 +1,88 @@
+Assignment instruction:
+The class project is due at the end of this week.
+
+Weather Program
+For your class project we will be creating an application to interacts with a webservice in order to obtain data. Your program will use all of the information you’ve learned in the class in order to create a useful application.
+
+Your program must prompt the user for their city or zip code and request weather forecast data from OpenWeatherMap. Your program must display the weather information in a READABLE format to the user.
+
+Requirements:
+
+Create a header for your program just as you have in the past.
+Create a Python Application which asks the user for their zip code or city.
+Use the zip code or city name in order to obtain weather forecast data from OpenWeatherMap.
+Display the weather forecast in a readable format to the user.
+Use comments within the application where appropriate in order to document what the program is doing.
+Use functions including a main function.
+Allow the user to run the program multiple times to allow them to look up weather conditions for multiple locations.
+Validate whether the user entered valid data. If valid data isn’t presented notify the user.
+Use the Requests library in order to request data from the webservice.
+Use Try blocks to ensure that your request was successful. If the connection was not successful display a message to the user.
+Use Python 3
+Use try blocks when establishing connections to the webservice. You must print a message to the user indicating whether or not the connection was successful
+Deliverables:
+
+Final Program in a .py file (Due week 12)
+Project Notes:
+
+Be creative. This assignment is a real world program. Use it as an opportunity to improve your knowledge.
+Sign up for API Key.
+The API key will look something similar to this: d5751b1a9e2e4b2b8c7983646072da8b
+Make a connection to the API using the Requests library.
+
+Code:
+
+import requests
+
+def main(): # Main Function.
+    while True:
+        # api_token = 'eb2ba0e78ef2daab5fe9f55ff273651b'
+        api_url_base = 'http://api.openweathermap.org/data/2.5/weather?APPID=eb2ba0e78ef2daab5fe9f55ff273651b'
+
+        prompt = 'Hello what is you name?\n' # Welcome message.
+        name = input(prompt)
+        print('Welcome', name + '.')
+
+        prompt = 'What is the 5 digit zipcode you wish to use?\n' # Obtain the zipcode.
+        chosen_zip_code = input(prompt)
+        print ('Thank you, the zipcode you have chosen is:', chosen_zip_code)
+        use_api(chosen_zip_code, api_url_base)
+
+        prompt = 'Would you like to restart the program Yes or No?\n'
+        answer = input(prompt)
+
+        if answer =='No': # Stops the program.
+            break
+        elif answer =='Yes': # Restarts the program.
+            continue
+        else: # Ends the program.
+            print('Invalid input')
+            print('Ending Program.')
+        break
+
+
+def pretty_print(json_zip): # Print results in readable format.
+    my_list = list ()
+    for key, val in list(json_zip.items()):
+        my_list.append((val, key))
+
+    for key, val in my_list[:]:
+        print('{:15s}{:15s}'.format(str(val), str(key)))
+
+
+def use_api(zip_code, api_url_base):
+    url_zip = api_url_base + '&zip=' + zip_code #Add the zipcode to the request.
+    zip_response = requests.get(url_zip)
+    json_zip = zip_response.json()
+    try:
+        if zip_response.status_code == 200: # Validates if request was successful.
+            print ('Request was successful.')
+            print('----------------------')
+            pretty_print(json_zip)
+        else: # Validates if request was not successful.
+            print('Request was not successful.')
+            return None
+    except:
+        print('An exception occurred.')
+
+main()
