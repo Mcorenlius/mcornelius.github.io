@@ -8,5 +8,5 @@
 ### - Marketbasket Analysis
 ### - Sales Promo Analysis
 ### - MLB Attendance Improvement  
-### - Time Series Analysis
+### - Sales Time Series Analysis
 ### - Movie Recommender 
