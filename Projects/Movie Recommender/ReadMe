@@ -1,6 +1,0 @@
-Here is a movie recommendation system that suggests movies based on the correlation of titles. This is done by averaging the user ratings and then giving it a weight based on the total rating count for that title.
-
-
-This recommendation system type is called a hybrid approach. With it being a combination of the two filtering systems called collaborative filtering and content-based filtering. Collaborative filtering is a type of filtering that is based on similar user preferences, while content-based filtering is based on a user past engagements.
-
-The average user rating would be the collaborative filtering, while the total review counts, which provide weight, would be the content filtering.
