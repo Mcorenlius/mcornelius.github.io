@@ -54,13 +54,15 @@ print(item_summary_sorted.head(25))
 
 # Define target 
 item target_item = "POPCORN HOLDER" 
-# dictionary item_frequencies = {} 
-# counter transaction_counter = 0 
-# Iterate through each transaction for index, row in transactions.iterrows(): 
+dictionary item_frequencies = {} 
+counter transaction_counter = 0 
+# Iterate through each transaction 
+for index, row in transactions.iterrows(): 
 items = row['Item_Name'] 
 if target_item in items: 
 transaction_counter += 1 
-# Increment the frequency for item in items: 
+# Increment the frequency 
+for item in items: 
 if item != target_item: 
 if item in item_frequencies:
 item_frequencies[item] += 1 
@@ -70,7 +72,8 @@ item_frequencies[item] = 1
 item_frequencies_df = pd.DataFrame(list(item_frequencies.items()), columns=['Item_Name', 'Frequency'])
 # Sort DataFrame 
 item_frequencies_df = item_frequencies_df.sort_values(by='Frequency', ascending=False)
-# Calculate the support target_item_support = transaction_counter / len(transactions)
+# Calculate the support 
+target_item_support = transaction_counter / len(transactions)
 # Display results 
 print("Target item:", target_item) 
 print("Number of transactions found:", transaction_counter) 
@@ -92,8 +95,10 @@ plt.show()
 
 # Calculate the likelihood (percentage) 
 item_frequencies_df['Likelihood'] = (item_frequencies_df['Frequency'] / transaction_counter) * 100 
-# Get the first 10 top_items = item_frequencies_df.head(10) 
-# Display the first 10 print('Top 10 Items Purchased Alongside "{}" with Likelihood:'.format(target_item)) 
+# Get the first 10 
+top_items = item_frequencies_df.head(10) 
+# Display the first 10 
+print('Top 10 Items Purchased Alongside "{}" with Likelihood:'.format(target_item)) 
 print(top_items)
 
 # Visualize the likelihood 
@@ -115,5 +120,7 @@ if target_item in items:
 target_index = items.index(target_item) 
 # Get quantity sold 
 target_quantity = quantities[target_index]
-# Check if target_quantity > 50: flag = True break
-# Print flag value print(flag)
+# Check 
+if target_quantity > 50: flag = True break
+# Print flag value 
+print(flag)
