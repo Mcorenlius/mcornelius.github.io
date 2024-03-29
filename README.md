@@ -2,7 +2,7 @@
 ## In this repository are the following projects:
 ### - Human Machine Symbiosis Poster
 ### - Weather Program
-### - Project 1
+### - Important Components of Music, What are they?
 ### - Project 2
 ### - Project 3
 ### - Marketbasket Analysis
