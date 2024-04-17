@@ -3,7 +3,7 @@
 ### - Human Machine Symbiosis Poster
 ### - Weather Program
 ### - Important Components of Music, What are they?
-### - Project 2
+### - Social Media Sentiment Analysis
 ### - Project 3
 ### - Marketbasket Analysis
 ### - Sales Promo Analysis
