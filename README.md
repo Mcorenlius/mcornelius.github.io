@@ -4,7 +4,7 @@
 ### - Weather Program
 ### - Important Components of Music, What are they?
 ### - Social Media Sentiment Analysis
-### - Project 3
+### - Cardiovascular Disease Predictor 
 ### - Marketbasket Analysis
 ### - Sales Promo Analysis
 ### - MLB Attendance Improvement  
