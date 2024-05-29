@@ -1,1 +1,1 @@
-Add
+The purpose of the project was to use a healthcare-based dataset that was centered on cardiovascular disease diagnosis. This data was obtained from Kaggle, and the main two models that were used were logistic regression and KNN. During the project, it was discovered that neither model was giving the desired results. Currently, the code/project is not in a finished state to be put into production. Currently, it is believed that more tuning of the models are needed to correct its deficiencies. 
